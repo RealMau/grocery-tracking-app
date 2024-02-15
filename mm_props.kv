@@ -1,0 +1,67 @@
+<Menu>:
+    name: "menu"
+
+    canvas.before:
+        Color:
+            rgba: (.5, .6, .8, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 50
+        spacing: 20
+
+
+        Button:
+            text: "User Settings"
+            font_size: 12
+            size_hint: (None, None)
+            pos_hint: {'center_x' : 0.9, 'center_y' : 0.9}
+            on_press:
+                root.manager.transition.direction = 'up'
+                app.root.current = "settings"
+
+
+
+
+<Settings>:
+    name: "settings"
+
+    canvas.before:
+        Color:
+            rgba: (.5, .6, .8, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 50
+        spacing: 20
+
+        Button:
+            text: "Back to menu"
+            font_size: 12
+            size_hint: (None, None)
+            pos_hint: {'center_x' : 0.1, 'center_y' : 0.1}
+            on_press:
+                root.manager.transition.direction = 'down'
+                app.root.current = "menu"
+
+<Recipes>:
+    name: "recipes"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+<Inventory>:
+    name: "inventory"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
