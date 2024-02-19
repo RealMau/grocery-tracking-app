@@ -1,0 +1,28 @@
+"""
+MealMasterApp.py
+
+This file contains the main application class for the MealMaster application.
+
+MealMaster is a recipe management application that allows users to keep track of their
+ingredients, create and store recipes, and plan meals. The application is built with
+Kivy, a cross-platform GUI library for Python, and uses a SQLite database to store
+user data.
+
+The main application class, MealMasterApp, inherits from the MDApp class provided
+by the KivyMD library. This class provides a number of built-in features, such as
+navigation bars, sliding panels, and dialog boxes, that simplify the development of
+the user interface.
+
+The build method of the MealMasterApp class creates a ScreenManager object, which
+is used to manage the different screens that make up the application. The
+MealMasterApp class also registers four screens with the ScreenManager: Menu,
+Settings, Recipes, and Inventory. Each screen is a separate Kivy widget that
+implements the Screen interface.
+
+When the application is run, the MealMasterApp class's run method is called, which
+starts the Kivy event loop and launches the GUI.
+
+Overall, the MealMaster application is a complex example of a Python/Kivy GUI
+application that demonstrates the use of a variety of Kivy features and libraries,
+including KivyMD, to create a user-friendly interface for managing recipes and meal
+planning.
